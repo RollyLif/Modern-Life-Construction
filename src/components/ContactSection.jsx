@@ -10,11 +10,11 @@ export default function ContactSection() {
       <div className="absolute inset-0 pattern-grid-dark opacity-[0.02] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div className="flex flex-col lg:flex-row gap-16">
-          
+
           {/* Contact Information */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -36,9 +36,9 @@ export default function ContactSection() {
 
             <div className="space-y-6">
               {/* WhatsApp 1 */}
-              <a 
-                href="https://wa.me/243994038768" 
-                target="_blank" 
+              <a
+                href="https://wa.me/243994038768"
+                target="_blank"
                 rel="noreferrer"
                 className="group flex items-center gap-6 p-6 rounded-3xl bg-white/[0.03] border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
@@ -52,9 +52,9 @@ export default function ContactSection() {
               </a>
 
               {/* WhatsApp 2 */}
-              <a 
-                href="https://wa.me/243814158525" 
-                target="_blank" 
+              <a
+                href="https://wa.me/243814158525"
+                target="_blank"
                 rel="noreferrer"
                 className="group flex items-center gap-6 p-6 rounded-3xl bg-white/[0.03] border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
@@ -68,8 +68,8 @@ export default function ContactSection() {
               </a>
 
               {/* Email */}
-              <a 
-                href="mailto:relifungula@gmail.com" 
+              <a
+                href="mailto:relifungula@gmail.com"
                 className="group flex items-center gap-6 p-6 rounded-3xl bg-white/[0.03] border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-full bg-primary/20 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
@@ -84,7 +84,7 @@ export default function ContactSection() {
           </motion.div>
 
           {/* Premium Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -93,25 +93,25 @@ export default function ContactSection() {
           >
             <form className="glass-panel-dark rounded-[2.5rem] p-10 md:p-14" onSubmit={(e) => e.preventDefault()}>
               <h4 className="text-2xl font-bold text-white mb-8">Demande de Renseignement</h4>
-              
+
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">Nom complet</label>
-                    <input 
-                      type="text" 
-                      id="name" 
+                    <input
+                      type="text"
+                      id="name"
                       className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
-                      placeholder="Jean Dupont"
+                      placeholder="Votre nom"
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="societe" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">Société</label>
-                    <input 
-                      type="text" 
-                      id="societe" 
+                    <input
+                      type="text"
+                      id="societe"
                       className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
                       placeholder="Votre Entreprise S.A."
                     />
@@ -120,28 +120,28 @@ export default function ContactSection() {
 
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">Adresse Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
+                  <input
+                    type="email"
+                    id="email"
                     className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
-                    placeholder="jean.dupont@entreprise.com"
+                    placeholder="votrenom@entreprise.com"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">Cahier des charges / Message</label>
-                  <textarea 
-                    id="message" 
-                    rows="5" 
+                  <textarea
+                    id="message"
+                    rows="5"
                     className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all resize-none"
                     placeholder="Veuillez décrire les grandes lignes de votre projet..."
                     required
                   ></textarea>
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="w-full bg-white text-dark py-5 rounded-2xl font-bold text-lg hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group mt-4 shadow-xl"
                 >
                   Soumettre le dossier
@@ -150,7 +150,7 @@ export default function ContactSection() {
               </div>
             </form>
           </motion.div>
-          
+
         </div>
       </div>
     </section>
