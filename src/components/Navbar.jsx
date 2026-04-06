@@ -39,7 +39,8 @@ export default function Navbar() {
       >
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer group" onClick={() => window.scrollTo(0,0)}>
+          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo(0,0)}>
+            <img src="/icon.svg" alt="Icon Modern Life" className={`h-10 w-10 transition-all duration-300 drop-shadow-lg ${scrolled ? 'scale-90' : 'scale-100'}`} />
             <div className="flex flex-col">
               <span className={`text-xl font-black tracking-tight leading-none transition-colors ${scrolled ? 'text-dark' : 'text-white drop-shadow-md'}`}>
                 MODERN LIFE
@@ -48,7 +49,7 @@ export default function Navbar() {
                 Construction <span className="opacity-70 lowercase normal-case">Sarl</span>
               </span>
             </div>
-            <div className={`w-8 h-[2px] ml-2 transition-all duration-300 group-hover:w-12 ${scrolled ? 'bg-primary' : 'bg-primary'}`}></div>
+            <div className={`w-6 h-[2px] ml-2 transition-all duration-300 group-hover:w-10 ${scrolled ? 'bg-primary' : 'bg-primary'}`}></div>
           </div>
 
           {/* Desktop Menu */}

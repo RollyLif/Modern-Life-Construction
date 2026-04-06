@@ -6,13 +6,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           
-          <div className="flex flex-col items-center md:items-start">
-            <span className="text-xl font-black text-white tracking-tighter">
-              MODERN LIFE
-            </span>
-            <span className="text-xs font-semibold tracking-widest text-primary uppercase">
-              Construction Sarl
-            </span>
+          <div className="flex items-center gap-3 md:items-start group">
+            <img src="/icon.svg" alt="Modern Life Logo" className="h-10 w-10 drop-shadow-lg opacity-80 group-hover:opacity-100 transition-opacity" />
+            <div className="flex flex-col">
+              <span className="text-xl font-black text-white tracking-tighter">
+                MODERN LIFE
+              </span>
+              <span className="text-xs font-semibold tracking-widest text-primary uppercase">
+                Construction Sarl
+              </span>
+            </div>
           </div>
 
           <div className="flex gap-6 text-sm">
