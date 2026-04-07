@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[#050505] text-gray-400 py-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          
+
           <div className="flex items-center gap-3 md:items-start group">
             <img src="/icon.svg" alt="Modern Life Logo" className="h-10 w-10 drop-shadow-lg opacity-80 group-hover:opacity-100 transition-opacity" />
             <div className="flex flex-col">
@@ -24,14 +24,11 @@ export default function Footer() {
             <a href="#about" className="hover:text-primary transition-colors">À Propos</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </div>
-          
+
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm flex flex-col md:flex-row justify-between items-center gap-4">
           <p>&copy; {currentYear} MODERN LIFE Construction Sarl. Tous droits réservés.</p>
-          <p className="text-xs">
-            Design moderne & responsive
-          </p>
         </div>
       </div>
     </footer>
