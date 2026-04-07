@@ -3,23 +3,23 @@ import { ArrowRight, Play } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative min-h-[100svh] flex items-center pt-24 pb-12 overflow-hidden bg-darker"
     >
       {/* Background Media */}
       <div className="absolute inset-0 z-0">
-        <motion.img 
+        <motion.img
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
-          src="https://images.unsplash.com/photo-1541888081622-1dcaef5622df?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80" 
-          alt="Architecture d'excellence" 
-          className="w-full h-full object-cover opacity-50"
+          src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Solutions Digitales et Informatiques"
+          className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-darker via-darker/60 to-darker/20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-darker/90 via-darker/40 to-transparent"></div>
-        
+
         {/* Subtle grid pattern overlay */}
         <div className="absolute inset-0 pattern-grid-dark opacity-20 pointer-events-none"></div>
       </div>
@@ -64,15 +64,15 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-12 flex flex-col sm:flex-row gap-6 items-start sm:items-center"
           >
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="group flex items-center justify-center gap-3 bg-primary text-white w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-dark transition-all duration-300 shadow-[0_0_40px_rgba(242,140,40,0.3)]"
             >
               Démarrer un projet
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </a>
-            <a 
-              href="#services" 
+            <a
+              href="#services"
               className="group flex items-center gap-4 text-white/80 hover:text-white transition-colors"
             >
               <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm group-hover:bg-white/10 group-hover:border-white/40 transition-all">
@@ -84,7 +84,7 @@ export default function HeroSection() {
         </div>
 
         {/* Stats Row */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
