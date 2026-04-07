@@ -53,7 +53,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="mt-8 text-lg md:text-2xl text-gray-400 max-w-2xl font-light leading-relaxed">
-              Expertise mondiale en génie civil, terrassement et intégration technologique. Nous transformons vos visions en infrastructures pérennes.
+              Expertise mondiale en génie civil, terrassement, électricité et intégration technologique. Nous transformons vos visions en infrastructures pérennes.
             </p>
           </motion.div>
 

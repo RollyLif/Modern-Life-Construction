@@ -98,10 +98,35 @@ export default function ServicesSection() {
                     'bg-white text-darker border border-gray-100 hover:shadow-xl'
                   } ${service.colSpan}`}
               >
-                {/* Decorative background circle on hover */}
-                <div className={`absolute -right-20 -top-20 w-64 h-64 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700
-                  ${isDark ? 'bg-white/5' : isPrimary ? 'bg-white/20' : 'bg-primary/5'}
-                `}></div>
+                {/* Animated Background Mesh (Always moving, brighter on hover) */}
+                <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                  <motion.div 
+                    animate={{ 
+                      x: [0, 40, -40, 0], 
+                      y: [0, 40, -40, 0],
+                      scale: [1, 1.2, 1]
+                    }}
+                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                    className={`absolute -top-1/2 -right-1/2 w-full h-full rounded-full blur-[80px] transition-colors duration-700
+                      ${isDark ? 'bg-primary/5 group-hover:bg-primary/20' : 
+                        isPrimary ? 'bg-white/10 group-hover:bg-white/30' : 
+                        'bg-primary/5 group-hover:bg-primary/15'}
+                    `}
+                  />
+                  <motion.div 
+                    animate={{ 
+                      x: [0, -30, 30, 0], 
+                      y: [0, -40, 40, 0],
+                      scale: [1, 1.5, 1]
+                    }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className={`absolute -bottom-1/2 -left-1/2 w-full h-full rounded-full blur-[100px] transition-colors duration-700
+                      ${isDark ? 'bg-white/5 group-hover:bg-white/10' : 
+                        isPrimary ? 'bg-black/5 group-hover:bg-black/10' : 
+                        'bg-gray-300/30 group-hover:bg-gray-400/30'}
+                    `}
+                  />
+                </div>
 
                 <div className="relative z-10 flex flex-col h-full justify-between">
                   <div>
