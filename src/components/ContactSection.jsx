@@ -1,9 +1,34 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Send, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function ContactSection() {
   const { t } = useTranslation();
+
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Demande de Devis - ${formData.company || formData.name}`);
+    const body = encodeURIComponent(`Nouveau message depuis le site web MODERN LIFE :\n\nNom: ${formData.name}\nSociété: ${formData.company || 'N/A'}\nEmail: ${formData.email}\n\nCahier des charges:\n${formData.message}`);
+    
+    // Ouvre le client mail par défaut (Outlook, Apple Mail, Gmail...)
+    window.location.href = `mailto:relifungula@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Reset optionnel du formulaire
+    setFormData({ name: '', company: '', email: '', message: '' });
+  };
   return (
     <section id="contact" className="py-32 bg-darker relative overflow-hidden">
       {/* Premium Background Effects */}
@@ -93,7 +118,7 @@ export default function ContactSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-full lg:w-7/12"
           >
-            <form className="glass-panel-dark rounded-[2.5rem] p-10 md:p-14" onSubmit={(e) => e.preventDefault()}>
+            <form className="glass-panel-dark rounded-[2.5rem] p-10 md:p-14" onSubmit={handleSubmit}>
               <h4 className="text-2xl font-bold text-white mb-8">{t('contact.form.title')}</h4>
 
               <div className="space-y-6">
@@ -103,6 +128,8 @@ export default function ContactSection() {
                     <input
                       type="text"
                       id="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
                       placeholder={t('contact.form.namePlaceholder')}
                       required
@@ -110,10 +137,12 @@ export default function ContactSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="societe" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">{t('contact.form.companyLabel')}</label>
+                    <label htmlFor="company" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">{t('contact.form.companyLabel')}</label>
                     <input
                       type="text"
-                      id="societe"
+                      id="company"
+                      value={formData.company}
+                      onChange={handleChange}
                       className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
                       placeholder={t('contact.form.companyPlaceholder')}
                     />
@@ -125,6 +154,8 @@ export default function ContactSection() {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
                     placeholder={t('contact.form.emailPlaceholder')}
                     required
@@ -136,6 +167,8 @@ export default function ContactSection() {
                   <textarea
                     id="message"
                     rows="5"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all resize-none"
                     placeholder={t('contact.form.msgPlaceholder')}
                     required
