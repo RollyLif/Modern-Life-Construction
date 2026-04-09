@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, Send, MessageCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactSection() {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="py-32 bg-darker relative overflow-hidden">
       {/* Premium Background Effects */}
@@ -24,13 +26,13 @@ export default function ContactSection() {
             <div>
               <div className="inline-flex items-center gap-2 mb-6">
                 <span className="w-10 h-[2px] bg-primary"></span>
-                <h2 className="text-white font-bold tracking-widest uppercase text-sm">Contact</h2>
+                <h2 className="text-white font-bold tracking-widest uppercase text-sm">{t('contact.tag')}</h2>
               </div>
               <h3 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-                Initier un <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">dialogue.</span>
+                {t('contact.title')} <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">{t('contact.titleHighlight')}</span>
               </h3>
               <p className="text-gray-400 text-lg font-light leading-relaxed">
-                Notre équipe de direction de projet est à votre disposition pour analyser vos besoins et structurer une offre technique et commerciale personnalisée.
+                {t('contact.desc')}
               </p>
             </div>
 
@@ -46,7 +48,7 @@ export default function ContactSection() {
                   <MessageCircle size={24} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">Direction Générale</div>
+                  <div className="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">{t('contact.dg')}</div>
                   <div className="text-xl font-medium text-white tracking-wide">+243 994 038 768</div>
                 </div>
               </a>
@@ -62,7 +64,7 @@ export default function ContactSection() {
                   <Phone size={24} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">Direction Technique</div>
+                  <div className="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">{t('contact.dt')}</div>
                   <div className="text-xl font-medium text-white tracking-wide">+243 814 158 525</div>
                 </div>
               </a>
@@ -76,7 +78,7 @@ export default function ContactSection() {
                   <Mail size={24} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">Bureau d'Études</div>
+                  <div className="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">{t('contact.be')}</div>
                   <div className="text-xl font-medium text-white tracking-wide">relifungula@gmail.com</div>
                 </div>
               </a>
@@ -92,50 +94,50 @@ export default function ContactSection() {
             className="w-full lg:w-7/12"
           >
             <form className="glass-panel-dark rounded-[2.5rem] p-10 md:p-14" onSubmit={(e) => e.preventDefault()}>
-              <h4 className="text-2xl font-bold text-white mb-8">Demande de Renseignement</h4>
+              <h4 className="text-2xl font-bold text-white mb-8">{t('contact.form.title')}</h4>
 
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">Nom complet</label>
+                    <label htmlFor="name" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">{t('contact.form.nameLabel')}</label>
                     <input
                       type="text"
                       id="name"
                       className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
-                      placeholder="Votre nom"
+                      placeholder={t('contact.form.namePlaceholder')}
                       required
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="societe" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">Société</label>
+                    <label htmlFor="societe" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">{t('contact.form.companyLabel')}</label>
                     <input
                       type="text"
                       id="societe"
                       className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
-                      placeholder="Votre Entreprise S.A."
+                      placeholder={t('contact.form.companyPlaceholder')}
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">Adresse Email</label>
+                  <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">{t('contact.form.emailLabel')}</label>
                   <input
                     type="email"
                     id="email"
                     className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
-                    placeholder="votrenom@entreprise.com"
+                    placeholder={t('contact.form.emailPlaceholder')}
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">Cahier des charges / Message</label>
+                  <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">{t('contact.form.msgLabel')}</label>
                   <textarea
                     id="message"
                     rows="5"
                     className="w-full px-5 py-4 bg-white/5 rounded-2xl border border-white/10 text-white focus:bg-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all resize-none"
-                    placeholder="Veuillez décrire les grandes lignes de votre projet..."
+                    placeholder={t('contact.form.msgPlaceholder')}
                     required
                   ></textarea>
                 </div>
@@ -144,7 +146,7 @@ export default function ContactSection() {
                   type="submit"
                   className="w-full bg-white text-dark py-5 rounded-2xl font-bold text-lg hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group mt-4 shadow-xl"
                 >
-                  Soumettre le dossier
+                  {t('contact.form.submit')}
                   <Send size={20} fill="currentColor" className="group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform" />
                 </button>
               </div>

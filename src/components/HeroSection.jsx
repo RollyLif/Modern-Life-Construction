@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function HeroSection() {
+  const { t } = useTranslation();
   return (
     <section
       id="home"
@@ -33,7 +35,7 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              <span className="text-sm font-medium tracking-wide text-white/90">L'Excellence en Ingénierie & BTP</span>
+              <span className="text-sm font-medium tracking-wide text-white/90">{t('hero.tag')}</span>
             </div>
           </motion.div>
 
@@ -43,7 +45,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold text-white leading-[1.1] tracking-tight">
-              Construire l’avenir avec <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">précision</span>
+              {t('hero.title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">{t('hero.titleHighlight')}</span>
             </h1>
           </motion.div>
 
@@ -53,7 +55,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="mt-8 text-lg md:text-2xl text-gray-400 max-w-2xl font-light leading-relaxed">
-              Expertise mondiale en génie civil, terrassement, électricité et intégration technologique. Nous transformons vos visions en infrastructures pérennes.
+              {t('hero.subtitle')}
             </p>
           </motion.div>
 
@@ -68,7 +70,7 @@ export default function HeroSection() {
               href="#contact"
               className="group flex items-center justify-center gap-3 bg-primary text-white w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-dark transition-all duration-300 shadow-[0_0_40px_rgba(242,140,40,0.3)]"
             >
-              Démarrer un projet
+              {t('hero.cta1')}
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </a>
             <a
@@ -78,7 +80,7 @@ export default function HeroSection() {
               <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm group-hover:bg-white/10 group-hover:border-white/40 transition-all">
                 <Play className="ml-1" size={18} fill="currentColor" />
               </div>
-              <span className="font-medium text-lg">Découvrir l'expertise</span>
+              <span className="font-medium text-lg">{t('hero.cta2')}</span>
             </a>
           </motion.div>
         </div>
@@ -91,10 +93,10 @@ export default function HeroSection() {
           className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10"
         >
           {[
-            { label: "Années d'expérience", value: "10+" },
-            { label: "Projets livrés", value: "150+" },
-            { label: "Clients satisfaits", value: "98%" },
-            { label: "Équipements", value: "45+" }
+            { label: t('hero.stats.expLabel'), value: t('hero.stats.expValue') },
+            { label: t('hero.stats.projLabel'), value: t('hero.stats.projValue') },
+            { label: t('hero.stats.clientLabel'), value: t('hero.stats.clientValue') },
+            { label: t('hero.stats.equipLabel'), value: t('hero.stats.equipValue') }
           ].map((stat, idx) => (
             <div key={idx}>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>

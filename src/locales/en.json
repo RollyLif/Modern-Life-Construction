@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Free Quote"
+  },
+  "hero": {
+    "tag": "Excellence in Engineering & Construction",
+    "title": "Building the future with",
+    "titleHighlight": "precision",
+    "subtitle": "Global expertise in civil engineering, earthworks, electricity, and technological integration. We transform your visions into lasting infrastructure.",
+    "cta1": "Start a project",
+    "cta2": "Discover our expertise",
+    "stats": {
+      "expLabel": "Years of experience",
+      "expValue": "10+",
+      "projLabel": "Delivered projects",
+      "projValue": "150+",
+      "clientLabel": "Satisfied clients",
+      "clientValue": "98%",
+      "equipLabel": "Equipment units",
+      "equipValue": "45+"
+    }
+  },
+  "services": {
+    "tag": "Areas of Expertise",
+    "title": "Comprehensive",
+    "titleHighlight": "360° solutions.",
+    "desc": "We cover the entire lifecycle of your projects, from geological studies to the deployment of integrated digital systems.",
+    "items": {
+      "btp": {
+        "title": "Civil Engineering",
+        "desc": "Construction of major infrastructure, commercial buildings, and public works with cutting-edge engineering."
+      },
+      "vrd": {
+        "title": "Earthworks & Utilities",
+        "desc": "Complete land development, road design, and various utility networks for site preparation."
+      },
+      "equip": {
+        "title": "Equipment",
+        "desc": "Modern and high-performance equipment fleet available for all types of construction sites."
+      },
+      "elec": {
+        "title": "Electrical Networks",
+        "desc": "Safe industrial and residential electrical installations ensuring compliance with international standards."
+      },
+      "tech": {
+        "title": "Digital Innovation",
+        "desc": "Development of custom applications and software solutions for project management and digital transformation."
+      }
+    }
+  },
+  "about": {
+    "img": {
+      "genie": "Civil Engineering",
+      "elec": "Electricity",
+      "vrd": "Earthworks",
+      "tech": "IT Solutions"
+    },
+    "badge": {
+      "val": "10+",
+      "label": "Years of<br />Excellence"
+    },
+    "tag": "The Modern Life Group",
+    "title": "Redefining the standards of",
+    "titleHighlight": "construction",
+    "p1": "<strong class=\"text-darker font-semibold\">MODERN LIFE Construction Sarl</strong> embodies the perfect alliance between proven traditional engineering and cutting-edge technological innovations.",
+    "p2": "From Kalemie to the international stage, we mobilize multidisciplinary teams to design, build, and secure infrastructure that stands the test of time. Our commitment: delivery without compromise on quality, safety, and deadlines.",
+    "address": {
+      "tag": "Headquarters",
+      "line1": "N°135, Avenue OUA, Q. Kahite",
+      "line2": "Commune of Lukuga",
+      "line3": "Kalemie, DRC"
+    }
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Initiate a",
+    "titleHighlight": "dialogue.",
+    "desc": "Our project management team is at your disposal to analyze your needs and structure a personalized technical and commercial offer.",
+    "dg": "General Management",
+    "dt": "Technical Management",
+    "be": "Design Office",
+    "form": {
+      "title": "Information Request",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Your name",
+      "companyLabel": "Company",
+      "companyPlaceholder": "Your Company Ltd.",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "yourname@company.com",
+      "msgLabel": "Requirements / Message",
+      "msgPlaceholder": "Please describe the main outlines of your project...",
+      "submit": "Submit request"
+    }
+  },
+  "footer": {
+    "rights": "MODERN LIFE Construction Sarl. All rights reserved."
+  }
+}

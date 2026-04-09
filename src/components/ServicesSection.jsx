@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import { Building2, Tractor, Truck, Zap, Code2, ArrowUpRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function ServicesSection() {
+  const { t } = useTranslation();
   const services = [
     {
       id: 1,
-      title: "BTP & Génie Civil",
-      description: "Construction d'infrastructures d'envergure, bâtiments commerciaux et travaux publics avec une ingénierie de pointe.",
+      title: t('services.items.btp.title'),
+      description: t('services.items.btp.desc'),
       icon: <Building2 strokeWidth={1.5} size={48} className="text-white" />,
       theme: "dark",
       colSpan: "md:col-span-2 lg:col-span-2",
@@ -14,8 +16,8 @@ export default function ServicesSection() {
     },
     {
       id: 2,
-      title: "Terrassement & VRD",
-      description: "Aménagement complet de terrains, conception de routes et réseaux divers pour préparatifs de chantiers.",
+      title: t('services.items.vrd.title'),
+      description: t('services.items.vrd.desc'),
       icon: <Tractor strokeWidth={1.5} size={48} className="text-primary" />,
       theme: "light",
       colSpan: "md:col-span-1 lg:col-span-1",
@@ -23,8 +25,8 @@ export default function ServicesSection() {
     },
     {
       id: 3,
-      title: "Équipements",
-      description: "Parc matériel moderne et performant disponible pour tous types de chantiers.",
+      title: t('services.items.equip.title'),
+      description: t('services.items.equip.desc'),
       icon: <Truck strokeWidth={1.5} size={48} className="text-primary" />,
       theme: "light",
       colSpan: "md:col-span-1 lg:col-span-1",
@@ -32,8 +34,8 @@ export default function ServicesSection() {
     },
     {
       id: 4,
-      title: "Réseaux Électriques",
-      description: "Installations électriques industrielles et résidentielles sécurisées et conformes aux normes internationales.",
+      title: t('services.items.elec.title'),
+      description: t('services.items.elec.desc'),
       icon: <Zap strokeWidth={1.5} size={48} className="text-white" />,
       theme: "primary",
       colSpan: "md:col-span-2 lg:col-span-1",
@@ -41,8 +43,8 @@ export default function ServicesSection() {
     },
     {
       id: 5,
-      title: "Innovation Digitale",
-      description: "Développement d'applications sur-mesure et solutions logicielles pour la gestion de projets et la transformation digitale.",
+      title: t('services.items.tech.title'),
+      description: t('services.items.tech.desc'),
       icon: <Code2 strokeWidth={1.5} size={48} className="text-primary" />,
       theme: "light",
       colSpan: "md:col-span-2 lg:col-span-1",
@@ -62,9 +64,9 @@ export default function ServicesSection() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Pôles d'Expertise</h2>
+            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">{t('services.tag')}</h2>
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-darker leading-[1.1]">
-              Des solutions <br/> <span className="text-gray-400 font-light">à 360 degrés.</span>
+              {t('services.title')} <br/> <span className="text-gray-400 font-light">{t('services.titleHighlight')}</span>
             </h3>
           </motion.div>
           
@@ -75,7 +77,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg text-gray-500 max-w-md border-l-2 border-primary/30 pl-6">
-              Nous couvrons l'intégralité du cycle de vie de vos projets, de l'étude géologique jusqu'au déploiement de systèmes digitaux intégrés.
+              {t('services.desc')}
             </p>
           </motion.div>
         </div>

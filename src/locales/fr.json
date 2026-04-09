@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À Propos",
+    "contact": "Contact",
+    "cta": "Devis Gratuit"
+  },
+  "hero": {
+    "tag": "L'Excellence en Ingénierie & BTP",
+    "title": "Construire l’avenir avec",
+    "titleHighlight": "précision",
+    "subtitle": "Expertise mondiale en génie civil, terrassement, électricité et intégration technologique. Nous transformons vos visions en infrastructures pérennes.",
+    "cta1": "Démarrer un projet",
+    "cta2": "Découvrir l'expertise",
+    "stats": {
+      "expLabel": "Années d'expérience",
+      "expValue": "10+",
+      "projLabel": "Projets livrés",
+      "projValue": "150+",
+      "clientLabel": "Clients satisfaits",
+      "clientValue": "98%",
+      "equipLabel": "Équipements",
+      "equipValue": "45+"
+    }
+  },
+  "services": {
+    "tag": "Pôles d'Expertise",
+    "title": "Des solutions",
+    "titleHighlight": "à 360 degrés.",
+    "desc": "Nous couvrons l'intégralité du cycle de vie de vos projets, de l'étude géologique jusqu'au déploiement de systèmes digitaux intégrés.",
+    "items": {
+      "btp": {
+        "title": "BTP & Génie Civil",
+        "desc": "Construction d'infrastructures d'envergure, bâtiments commerciaux et travaux publics avec une ingénierie de pointe."
+      },
+      "vrd": {
+        "title": "Terrassement & VRD",
+        "desc": "Aménagement complet de terrains, conception de routes et réseaux divers pour préparatifs de chantiers."
+      },
+      "equip": {
+        "title": "Équipements",
+        "desc": "Parc matériel moderne et performant disponible pour tous types de chantiers."
+      },
+      "elec": {
+        "title": "Réseaux Électriques",
+        "desc": "Installations électriques industrielles et résidentielles sécurisées et conformes aux normes internationales."
+      },
+      "tech": {
+        "title": "Innovation Digitale",
+        "desc": "Développement d'applications sur-mesure et solutions logicielles pour la gestion de projets et la transformation digitale."
+      }
+    }
+  },
+  "about": {
+    "img": {
+      "genie": "Génie Civil",
+      "elec": "Électricité",
+      "vrd": "Terrassement",
+      "tech": "Informatique"
+    },
+    "badge": {
+      "val": "10+",
+      "label": "Années<br />d'Excellence"
+    },
+    "tag": "Le Groupe Modern Life",
+    "title": "Redéfinir les standards de la",
+    "titleHighlight": "construction",
+    "p1": "<strong class=\"text-darker font-semibold\">MODERN LIFE Construction Sarl</strong> incarne l'alliance parfaite entre l’ingénierie traditionnelle éprouvée et les innovations technologiques de pointe.",
+    "p2": "De Kalemie jusqu'à l'international, nous mobilisons des équipes pluridisciplinaires pour concevoir, bâtir et sécuriser des infrastructures qui résistent à l'épreuve du temps. Notre engagement : la livraison sans compromis sur la qualité, la sécurité et les délais.",
+    "address": {
+      "tag": "Quartier Général",
+      "line1": "N°135, Avenue OUA, Q. Kahite",
+      "line2": "Commune de Lukuga",
+      "line3": "Kalemie, RDC"
+    }
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Initier un",
+    "titleHighlight": "dialogue.",
+    "desc": "Notre équipe de direction de projet est à votre disposition pour analyser vos besoins et structurer une offre technique et commerciale personnalisée.",
+    "dg": "Direction Générale",
+    "dt": "Direction Technique",
+    "be": "Bureau d'Études",
+    "form": {
+      "title": "Demande de Renseignement",
+      "nameLabel": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "companyLabel": "Société",
+      "companyPlaceholder": "Votre Entreprise S.A.",
+      "emailLabel": "Adresse Email",
+      "emailPlaceholder": "votrenom@entreprise.com",
+      "msgLabel": "Cahier des charges / Message",
+      "msgPlaceholder": "Veuillez décrire les grandes lignes de votre projet...",
+      "submit": "Soumettre le dossier"
+    }
+  },
+  "footer": {
+    "rights": "MODERN LIFE Construction Sarl. Tous droits réservés."
+  }
+}

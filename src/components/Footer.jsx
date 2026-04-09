@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,16 +22,16 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-6 text-sm">
-            <a href="#home" className="hover:text-primary transition-colors">Accueil</a>
-            <a href="#services" className="hover:text-primary transition-colors">Services</a>
-            <a href="#about" className="hover:text-primary transition-colors">À Propos</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <a href="#home" className="hover:text-primary transition-colors">{t('nav.home')}</a>
+            <a href="#services" className="hover:text-primary transition-colors">{t('nav.services')}</a>
+            <a href="#about" className="hover:text-primary transition-colors">{t('nav.about')}</a>
+            <a href="#contact" className="hover:text-primary transition-colors">{t('nav.contact')}</a>
           </div>
 
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>&copy; {currentYear} MODERN LIFE Construction Sarl. Tous droits réservés.</p>
+          <p>&copy; {currentYear} {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

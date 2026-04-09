@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -15,11 +17,16 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'À Propos', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.home'), href: '#home' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language.startsWith('en') ? 'fr' : 'en';
+    i18n.changeLanguage(nextLang);
+  };
 
   return (
     <motion.nav
@@ -65,16 +72,27 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+            
+            {/* Language Switch */}
+            <button 
+              onClick={toggleLanguage} 
+              className={`px-3 py-1 font-bold text-sm tracking-widest rounded-full transition-all border ${
+                scrolled ? 'text-dark border-dark/10 hover:bg-dark/5' : 'text-white border-white/20 hover:bg-white/10'
+              }`}
+            >
+              <span className={i18n.language.startsWith('fr') ? 'text-primary' : ''}>FR</span> | <span className={i18n.language.startsWith('en') ? 'text-primary' : ''}>EN</span>
+            </button>
+
             <div className="pl-4 ml-2 border-l border-black/10">
               <a
                 href="#contact"
-                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 shadow-lg ${
+                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 shadow-lg whitespace-nowrap ${
                   scrolled 
                     ? 'bg-dark text-white hover:bg-primary shadow-dark/20' 
                     : 'bg-primary text-white hover:bg-white hover:text-dark shadow-primary/30'
                 }`}
               >
-                Devis Gratuit
+                {t('nav.cta')}
               </a>
             </div>
           </div>
@@ -114,13 +132,22 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
+              <div className="flex items-center justify-between px-4 py-3 border-t border-gray-100 mt-2">
+                <span className="text-sm font-medium text-gray-500">Langue / Language</span>
+                <button 
+                  onClick={toggleLanguage} 
+                  className="font-bold text-sm tracking-widest text-dark bg-gray-100 px-4 py-2 rounded-lg"
+                >
+                  <span className={i18n.language.startsWith('fr') ? 'text-primary' : ''}>FR</span> | <span className={i18n.language.startsWith('en') ? 'text-primary' : ''}>EN</span>
+                </button>
+              </div>
               <div className="pt-2 mt-2 border-t border-gray-100">
                 <a
                   href="#contact"
                   onClick={() => setIsOpen(false)}
                   className="flex justify-center w-full bg-dark text-white px-5 py-3.5 rounded-xl font-bold hover:bg-primary transition-colors"
                 >
-                  Obtenir un devis
+                  {t('nav.cta')}
                 </a>
               </div>
             </div>

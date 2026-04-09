@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { MapPin, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function AboutSection() {
+  const { t } = useTranslation();
   return (
     <section id="about" className="py-32 bg-white overflow-hidden relative">
       {/* Background Element */}
@@ -24,13 +26,13 @@ export default function AboutSection() {
               <div className="relative rounded-3xl overflow-hidden shadow-lg group h-1/2">
                 <img src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Génie Civil" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-darker/90 via-darker/20 to-transparent"></div>
-                <div className="absolute bottom-5 left-5 text-white font-bold text-xl tracking-wide group-hover:-translate-y-1 transition-transform">Génie Civil</div>
+                <div className="absolute bottom-5 left-5 text-white font-bold text-xl tracking-wide group-hover:-translate-y-1 transition-transform">{t('about.img.genie')}</div>
               </div>
               {/* Électricité */}
               <div className="relative rounded-3xl overflow-hidden shadow-lg group h-1/2">
                 <img src="https://loremflickr.com/g/600/600/lineman,power/all" alt="Chantier Électricité" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-darker/90 via-darker/20 to-transparent"></div>
-                <div className="absolute bottom-5 left-5 text-white font-bold text-xl tracking-wide group-hover:-translate-y-1 transition-transform">Électricité</div>
+                <div className="absolute bottom-5 left-5 text-white font-bold text-xl tracking-wide group-hover:-translate-y-1 transition-transform">{t('about.img.elec')}</div>
               </div>
             </div>
 
@@ -40,13 +42,13 @@ export default function AboutSection() {
               <div className="relative rounded-3xl overflow-hidden shadow-lg group h-1/2">
                 <img src="https://loremflickr.com/g/600/600/excavator,construction/all" alt="Terrassement et VRD" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-darker/90 via-darker/20 to-transparent"></div>
-                <div className="absolute bottom-5 left-5 text-white font-bold text-xl tracking-wide group-hover:-translate-y-1 transition-transform">Terrassement</div>
+                <div className="absolute bottom-5 left-5 text-white font-bold text-xl tracking-wide group-hover:-translate-y-1 transition-transform">{t('about.img.vrd')}</div>
               </div>
               {/* Informatique */}
               <div className="relative rounded-3xl overflow-hidden shadow-lg group h-1/2">
                 <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Informatique" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-darker/90 via-darker/20 to-transparent"></div>
-                <div className="absolute bottom-5 left-5 text-white font-bold text-xl tracking-wide group-hover:-translate-y-1 transition-transform">Informatique</div>
+                <div className="absolute bottom-5 left-5 text-white font-bold text-xl tracking-wide group-hover:-translate-y-1 transition-transform">{t('about.img.tech')}</div>
               </div>
             </div>
 
@@ -58,8 +60,8 @@ export default function AboutSection() {
               transition={{ delay: 0.7, type: 'spring', stiffness: 100 }}
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-darker w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-2xl z-30 ring-8 ring-white/50"
             >
-              <span className="text-4xl font-black text-primary">10+</span>
-              <span className="text-[10px] uppercase tracking-widest font-bold mt-1 text-center leading-tight">Années<br />d'Excellence</span>
+              <span className="text-4xl font-black text-primary">{t('about.badge.val')}</span>
+              <span className="text-[10px] uppercase tracking-widest font-bold mt-1 text-center leading-tight" dangerouslySetInnerHTML={{ __html: t('about.badge.label') }}></span>
             </motion.div>
           </motion.div>
 
@@ -73,20 +75,16 @@ export default function AboutSection() {
           >
             <div className="inline-flex items-center gap-2 mb-6">
               <span className="w-10 h-[2px] bg-primary"></span>
-              <h2 className="text-dark font-bold tracking-widest uppercase text-sm">Le Groupe Modern Life</h2>
+              <h2 className="text-dark font-bold tracking-widest uppercase text-sm">{t('about.tag')}</h2>
             </div>
 
             <h3 className="text-4xl md:text-5xl font-black text-darker mb-8 leading-[1.1]">
-              Redéfinir les standards de la <span className="text-primary italic font-serif font-light">construction</span>.
+              {t('about.title')} <span className="text-primary italic font-serif font-light">{t('about.titleHighlight')}</span>.
             </h3>
 
             <div className="space-y-6 text-lg text-gray-500 font-light mb-12">
-              <p>
-                <strong className="text-darker font-semibold">MODERN LIFE Construction Sarl</strong> incarne l'alliance parfaite entre l’ingénierie traditionnelle éprouvée et les innovations technologiques de pointe.
-              </p>
-              <p>
-                De Kalemie jusqu'à l'international, nous mobilisons des équipes pluridisciplinaires pour concevoir, bâtir et sécuriser des infrastructures qui résistent à l'épreuve du temps. Notre engagement : la livraison sans compromis sur la qualité, la sécurité et les délais.
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: t('about.p1') }}></p>
+              <p>{t('about.p2')}</p>
             </div>
 
             {/* Premium Address Bar */}
@@ -98,11 +96,11 @@ export default function AboutSection() {
                   <MapPin size={28} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h4 className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-bold mb-2">Quartier Général</h4>
+                  <h4 className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-bold mb-2">{t('about.address.tag')}</h4>
                   <address className="not-italic text-lg font-medium leading-relaxed">
-                    N°135, Avenue OUA, Q. Kahite<br />
-                    Commune de Lukuga<br />
-                    <span className="text-primary">Kalemie, RDC</span>
+                    {t('about.address.line1')}<br />
+                    {t('about.address.line2')}<br />
+                    <span className="text-primary">{t('about.address.line3')}</span>
                   </address>
                 </div>
               </div>
